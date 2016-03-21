@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--Brittaney Nico Davis - Web 150 - 3/13/16 - Assignment 10-->
+<html>
+<head>
+  <title></title>
+<!--Link the External documents-->
+<link rel="stylesheet" type="text/css" href="final.css">
+<link rel="stylesheet" type="text/css" href="scripts/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="scripts/jquery-ui.theme.min.css">
+</head>
+<body>
+  <div class= "storage">
+  <header><img id= "header-img" src= "imgs/circuit.jpg"/></header>
+  </div>
+	<p class= "links">
+    	<a href= "index.html">Home</a>
+    	<a href= "about.html">About</a>
+    	<a href= "services.html">Services</a>
+    	<a href= "contactus.html">Contact Us</a>
+  	</p>
+  <h3>Contact Circuit Styling</h3>
+  <div class= "main-content">
+    <p>Circuit Styling would love to hear from you. Depending on your needs, our team is flexible.</p>
+    <p>Do you have a project you'd like us to look at? Or are you simply curious about our pricing and process?
+    </p>
+    <p>Either way, we're happy to help and hear from you.</p>
+    <h3>We're easy to get ahold of..</h3>
+<!--Accordion Widget-->
+    <div id="accordion">
+    <h3>Live Help:</h3>
+    <div>
+      <p>
+        Circuit Styling offers live chat to communicate with our future clients.
+        Average wait times are less than a minute.
+      </p>
+    </div>
+    <h3>Phone:</h3>
+    <div>
+      <p>
+         111-222-3333
+      </p>
+    </div>
+    <h3>Email:</h3>
+    <div>
+      <p>
+        Perhaps our second most convenient method of contact.
+        <a href="mailto:circuit.styling@gmail.com">Email Us.</a>
+      </p>
+    </div>
+    <h3>Location:</h3>
+    <div>
+      <p>
+        Located in the industrious and endearing Detroit, MI, our small office
+        is mostly home to outdated software boxes, 3D printers, and empty soda
+        cans.
+      </p>
+      <p>
+        Address: 111 South Biggleton Rd, Detroit, MI
+      </p>
+      <p>
+        Want to admire our extensive soda can collection? Or are you interested
+        in our 3D printer? Select a date you'd like to visit and book an
+        appointment in the form below.
+      </p>
+      <p>Book Now: <input type="text" id="datepicker"></p>
+    </div>
+  </div>
+  <form action="success.html" method="get"
+       name="appointment_form" id="appointment_form">
+     <fieldset class= "formBox">
+         <legend>Book an Appointment with Circuit Styling</legend>
+         <label for="first_name">First Name:</label>
+         <input type="text" name="first_name" id="first_name" minlength="2"><br>
+         <label for="last_name">Last Name: (optional)</label>
+         <input type="text" name="last_name" id="last_name" minlength= "2"><br>
+         <label for="email_address">Email Address: (will not be published)</label>
+         <input type="email" name="email_address" id="email_address" autofocus><br>
+         <label for="phone_number">Phone Number: (optional)</label>
+         <input type="text" name="phone_number" id="phone_number" placeholder="999-999-9999" minlength= "10"><br>
+         <label for="last_name">Preferred method of contact:</label>
+         <input type="text" name="contact_date" id="contact_date" placeholder="MM-DD-YYYY" minlength= "10"><br>
+     </fieldset>
+     <fieldset id="buttons">
+       <legend>Submit</legend>
+       <label>&nbsp;</label>
+       <input type="submit" id="submit" value="Submit">
+       <input type="reset" id="reset" value="Reset"><br>
+     </fieldset>
+   </form>
+    	<div class="bottom-img"><img src="imgs/4d.jpg"/>
+    </div>
+ </div>
+<!--Scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="scripts/final.js"></script>
+<script src= "scripts/jquery-ui.min.js"></script>
+<script>
+  $(function() {
+    $("#accordion").accordion();
+  });
+</script>
+<script>
+  $(function() {
+    $("#datepicker").datepicker();
+  });
+</script>
+<script src= "scripts/jquery.validate.min.js"></script>
+</body>
+</html>
